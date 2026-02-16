@@ -55,13 +55,17 @@ html, body {
   visibility: hidden;
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
               visibility 0.6s;
-  background: var(--bg-deep);
+  background: linear-gradient(rgba(12, 18, 32, 0.85), rgba(12, 18, 32, 0.85)), url('dark-sea-bg.png') center/cover no-repeat;
   overflow-y: auto;
 }
 
 .slide.active {
   opacity: 1;
   visibility: visible;
+}
+
+.slide.slide-title-bg {
+  background: url('dark-sea-bg.png') center/cover no-repeat;
 }
 
 .slide-inner {
@@ -279,12 +283,12 @@ ul.questions li:last-child { border-bottom: none; }
 .diagram svg .node-emerald { fill: rgba(45,138,110,0.15); stroke: #2d8a6e; stroke-width: 1.5; }
 .diagram svg .node-coral { fill: rgba(224,85,85,0.12); stroke: #e05555; stroke-width: 1.5; }
 .diagram svg .node-navy { fill: rgba(30,58,110,0.25); stroke: #1e3a6e; stroke-width: 1.5; }
-.diagram svg .node-surface { fill: rgba(255,255,255,0.06); stroke: rgba(255,255,255,0.12); stroke-width: 1; }
+.diagram svg .node-surface { fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.08); stroke-width: 1; }
 .diagram svg .connector { stroke: rgba(255,255,255,0.2); stroke-width: 1.5; fill: none; }
 .diagram svg .connector-gold { stroke: rgba(212,168,67,0.4); stroke-width: 1.5; fill: none; }
 .diagram svg .label-gold { fill: #d4a843; }
-.diagram svg .label-muted { fill: #8899ab; }
-.diagram svg .label-primary { fill: #e8ecf2; }
+.diagram svg .label-muted { fill: #cdd5de; }
+.diagram svg .label-primary { fill: #ffffff; }
 
 /* Full-bleed diagram for synthesis slide */
 .diagram-full {
@@ -539,7 +543,7 @@ ul.questions li:last-child { border-bottom: none; }
 <div class="deck" id="deck">
 
   <!-- ═══════ SLIDE 1: TITLE ═══════ -->
-  <div class="slide active" data-slide="0">
+  <div class="slide active slide-title-bg" data-slide="0">
     <div class="slide-inner" style="text-align:center;">
       <div class="north-star animate-in">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -681,36 +685,36 @@ ul.questions li:last-child { border-bottom: none; }
           <!-- Bubble 1: "chat logs?" — pointing down-left at group 1 -->
           <g filter="url(#coralGlow)">
             <path d="M95,95 L130,95 Q140,95 140,85 L140,65 Q140,55 130,55 L50,55 Q40,55 40,65 L40,85 Q40,95 50,95 L80,95 L90,112 Z"
-                  fill="rgba(224,85,85,0.15)" stroke="#e05555" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <text x="90" y="80" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#e05555">chat logs?</text>
+                  fill="#e05555" stroke="#ff6b6b" stroke-width="1.5"/>
+            <text x="90" y="80" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#ffffff">chat logs?</text>
           </g>
 
           <!-- Bubble 2: "availability?" — pointing down at group 2 -->
           <g filter="url(#coralGlow)">
             <path d="M345,95 L395,95 Q405,95 405,85 L405,65 Q405,55 395,55 L305,55 Q295,55 295,65 L295,85 Q295,95 305,95 L335,95 L350,112 Z"
-                  fill="rgba(224,85,85,0.15)" stroke="#e05555" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <text x="350" y="80" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#e05555">availability?</text>
+                  fill="#e05555" stroke="#ff6b6b" stroke-width="1.5"/>
+            <text x="350" y="80" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#ffffff">availability?</text>
           </g>
 
           <!-- Bubble 3: "rules?" — pointing down-right at group 3 -->
           <g filter="url(#coralGlow)">
             <path d="M650,95 L685,95 Q695,95 695,85 L695,65 Q695,55 685,55 L625,55 Q615,55 615,65 L615,85 Q615,95 625,95 L640,95 L650,112 Z"
-                  fill="rgba(224,85,85,0.15)" stroke="#e05555" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <text x="655" y="80" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#e05555">rules?</text>
+                  fill="#e05555" stroke="#ff6b6b" stroke-width="1.5"/>
+            <text x="655" y="80" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#ffffff">rules?</text>
           </g>
 
           <!-- Bubble 4: "ownership?" — floating between groups 1 & 2 -->
           <g filter="url(#coralGlow)">
             <path d="M230,115 L280,115 Q290,115 290,105 L290,85 Q290,75 280,75 L195,75 Q185,75 185,85 L185,105 Q185,115 195,115 L220,115 L235,130 Z"
-                  fill="rgba(224,85,85,0.15)" stroke="#e05555" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <text x="237" y="100" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#e05555">ownership?</text>
+                  fill="#e05555" stroke="#ff6b6b" stroke-width="1.5"/>
+            <text x="237" y="100" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#ffffff">ownership?</text>
           </g>
 
           <!-- Bubble 5: "governance?" — floating between groups 2 & 3 -->
           <g filter="url(#coralGlow)">
             <path d="M505,115 L570,115 Q580,115 580,105 L580,85 Q580,75 570,75 L470,75 Q460,75 460,85 L460,105 Q460,115 470,115 L495,115 L510,130 Z"
-                  fill="rgba(224,85,85,0.15)" stroke="#e05555" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <text x="520" y="100" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#e05555">governance?</text>
+                  fill="#e05555" stroke="#ff6b6b" stroke-width="1.5"/>
+            <text x="520" y="100" text-anchor="middle" font-size="12" font-weight="500" font-style="italic" fill="#ffffff">governance?</text>
           </g>
 
           <!-- Bottom question -->
@@ -888,13 +892,13 @@ ul.questions li:last-child { border-bottom: none; }
           </defs>
 
           <!-- Main label box -->
-          <rect x="15" y="170" width="160" height="60" rx="12" class="node-blue" filter="url(#glow6)"/>
-          <text x="95" y="195" text-anchor="middle" font-size="13" font-weight="600" class="label-primary">True North</text>
-          <text x="95" y="214" text-anchor="middle" font-size="13" font-weight="600" class="label-primary">Family Chat</text>
+          <rect x="15" y="175" width="160" height="60" rx="12" class="node-blue" filter="url(#glow6)"/>
+          <text x="95" y="198" text-anchor="middle" font-size="13" font-weight="600" class="label-primary">True North</text>
+          <text x="95" y="217" text-anchor="middle" font-size="13" font-weight="600" class="label-primary">Family Chat</text>
 
           <!-- Connector trunk -->
-          <line x1="175" y1="200" x2="220" y2="200" class="connector-gold"/>
-          <line x1="220" y1="35" x2="220" y2="395" class="connector-gold"/>
+          <line x1="175" y1="205" x2="220" y2="205" class="connector-gold"/>
+          <line x1="220" y1="45" x2="220" y2="365" class="connector-gold"/>
 
           <!-- ── Branch 1: Encrypted personal memory vault ── -->
           <line x1="220" y1="45" x2="260" y2="45" class="connector"/>
@@ -902,18 +906,18 @@ ul.questions li:last-child { border-bottom: none; }
           <text x="280" y="50" font-size="13" class="label-primary">Encrypted personal memory vault</text>
 
           <!-- ── Branch 2: Sovereign AI chat archive ── -->
-          <line x1="220" y1="110" x2="260" y2="110" class="connector"/>
-          <rect x="260" y="90" width="250" height="40" rx="8" class="node-surface" filter="url(#glow6)"/>
-          <text x="280" y="115" font-size="13" class="label-primary">Sovereign AI chat archive</text>
+          <line x1="220" y1="125" x2="260" y2="125" class="connector"/>
+          <rect x="260" y="105" width="250" height="40" rx="8" class="node-surface" filter="url(#glow6)"/>
+          <text x="280" y="130" font-size="13" class="label-primary">Sovereign AI chat archive</text>
 
           <!-- ── Branch 3: Family governance mode (with children) ── -->
-          <line x1="220" y1="200" x2="260" y2="200" class="connector"/>
-          <rect x="260" y="180" width="230" height="40" rx="8" class="node-gold" filter="url(#glow6)"/>
-          <text x="280" y="205" font-size="13" font-weight="500" class="label-primary">Family governance mode</text>
+          <line x1="220" y1="205" x2="260" y2="205" class="connector"/>
+          <rect x="260" y="185" width="230" height="40" rx="8" class="node-gold" filter="url(#glow6)"/>
+          <text x="280" y="210" font-size="13" font-weight="500" class="label-primary">Family governance mode</text>
 
           <!-- Governance sub-trunk -->
-          <line x1="490" y1="200" x2="530" y2="200" class="connector-gold"/>
-          <line x1="530" y1="160" x2="530" y2="270" class="connector-gold"/>
+          <line x1="490" y1="205" x2="530" y2="205" class="connector-gold"/>
+          <line x1="530" y1="165" x2="530" y2="245" class="connector-gold"/>
 
           <!-- Child 1: Shared family sessions -->
           <line x1="530" y1="165" x2="560" y2="165" class="connector"/>
@@ -921,19 +925,19 @@ ul.questions li:last-child { border-bottom: none; }
           <text x="578" y="170" font-size="12" class="label-primary">Shared family sessions</text>
 
           <!-- Child 2: Parental oversight -->
-          <line x1="530" y1="210" x2="560" y2="210" class="connector"/>
-          <rect x="560" y="192" width="200" height="36" rx="8" class="node-emerald" filter="url(#glow6)"/>
-          <text x="578" y="215" font-size="12" class="label-primary">Parental oversight</text>
+          <line x1="530" y1="205" x2="560" y2="205" class="connector"/>
+          <rect x="560" y="187" width="200" height="36" rx="8" class="node-emerald" filter="url(#glow6)"/>
+          <text x="578" y="210" font-size="12" class="label-primary">Parental oversight</text>
 
           <!-- Child 3: Prompt & output approval -->
-          <line x1="530" y1="260" x2="560" y2="260" class="connector"/>
-          <rect x="560" y="242" width="240" height="36" rx="8" class="node-emerald" filter="url(#glow6)"/>
-          <text x="578" y="265" font-size="12" class="label-primary">Prompt &amp; output approval</text>
+          <line x1="530" y1="245" x2="560" y2="245" class="connector"/>
+          <rect x="560" y="227" width="240" height="36" rx="8" class="node-emerald" filter="url(#glow6)"/>
+          <text x="578" y="250" font-size="12" class="label-primary">Prompt &amp; output approval</text>
 
           <!-- ── Branch 4: Model portability ── -->
-          <line x1="220" y1="310" x2="260" y2="310" class="connector"/>
-          <rect x="260" y="290" width="200" height="40" rx="8" class="node-surface" filter="url(#glow6)"/>
-          <text x="280" y="315" font-size="13" class="label-primary">Model portability</text>
+          <line x1="220" y1="285" x2="260" y2="285" class="connector"/>
+          <rect x="260" y="265" width="200" height="40" rx="8" class="node-surface" filter="url(#glow6)"/>
+          <text x="280" y="290" font-size="13" class="label-primary">Model portability</text>
 
           <!-- ── Branch 5: Cross-provider continuity ── -->
           <line x1="220" y1="365" x2="260" y2="365" class="connector"/>
@@ -1092,9 +1096,6 @@ ul.questions li:last-child { border-bottom: none; }
               <feGaussianBlur stdDeviation="2.5" result="blur"/>
               <feComposite in="SourceGraphic" in2="blur" operator="over"/>
             </filter>
-            <marker id="arrA" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-              <path d="M0,0 L8,3 L0,6" fill="rgba(255,255,255,0.2)"/>
-            </marker>
           </defs>
 
           <!-- Outer container -->
@@ -1118,10 +1119,10 @@ ul.questions li:last-child { border-bottom: none; }
           <text x="690" y="88" text-anchor="middle" font-size="11" class="label-primary">Access Point 4</text>
 
           <!-- Connectors AP → Applications -->
-          <line x1="130" y1="101" x2="200" y2="135" class="connector" marker-end="url(#arrA)"/>
-          <line x1="320" y1="101" x2="320" y2="135" class="connector" marker-end="url(#arrA)"/>
-          <line x1="510" y1="101" x2="510" y2="135" class="connector" marker-end="url(#arrA)"/>
-          <line x1="690" y1="101" x2="620" y2="135" class="connector" marker-end="url(#arrA)"/>
+          <line x1="130" y1="101" x2="200" y2="135" class="connector"/>
+          <line x1="320" y1="101" x2="320" y2="135" class="connector"/>
+          <line x1="510" y1="101" x2="510" y2="135" class="connector"/>
+          <line x1="690" y1="101" x2="620" y2="135" class="connector"/>
 
           <!-- ── LAYER 2: APPLICATIONS ── -->
           <rect x="40" y="130" width="740" height="65" rx="12" class="node-surface" style="stroke:rgba(45,138,110,0.25)"/>
@@ -1808,33 +1809,6 @@ ul.questions li:last-child { border-bottom: none; }
     </div>
   </div>
 
-  <!-- ═══════ SLIDE 15: BUSINESS STRATEGY ═══════ -->
-  <div class="slide" data-slide="14">
-    <div class="slide-inner">
-      <h3 class="animate-in">Go-to-Market</h3>
-      <h1 class="animate-in">Business Strategy — <span class="gold">Barbell Approach</span></h1>
-      <div class="columns animate-in">
-        <div class="card gold-border">
-          <h3>Consumer Track — Year 1</h3>
-          <ul class="features">
-            <li>Launch with real families</li>
-            <li>Iterate tightly on core loop</li>
-            <li>Generate early subscription revenue</li>
-            <li>Build authentic use cases</li>
-          </ul>
-        </div>
-        <div class="card gold-border">
-          <h3>Enterprise Track — Year 1</h3>
-          <ul class="features">
-            <li>Secure one serious POC</li>
-            <li>Convert to paid implementation</li>
-            <li>Validate governance layer</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ═══════ SLIDE 16: TRACTION DISCIPLINE ═══════ -->
   <div class="slide" data-slide="15">
     <div class="slide-inner" style="text-align:center;">
@@ -1902,7 +1876,7 @@ ul.questions li:last-child { border-bottom: none; }
   </div>
 
   <!-- ═══════ SLIDE 19: THE VISION ═══════ -->
-  <div class="slide" data-slide="18">
+  <div class="slide slide-title-bg" data-slide="18">
     <div class="slide-inner" style="text-align:center;">
       <div class="north-star animate-in" style="opacity:0.4;">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1930,32 +1904,6 @@ ul.questions li:last-child { border-bottom: none; }
     </div>
   </div>
 
-  <!-- ═══════ SLIDE 20: THE ASK ═══════ -->
-  <div class="slide" data-slide="19">
-    <div class="slide-inner" style="text-align:center;">
-      <h3 class="animate-in">The Ask</h3>
-      <div class="ask-amount animate-in">$500K</div>
-      <p class="animate-in" style="text-align:center; font-size:1.2rem; color:var(--text-secondary); margin-bottom:2rem;">
-        Seed round to prove measurable value on both tracks.
-      </p>
-      <div class="milestone-grid animate-in">
-        <div class="milestone">
-          <div class="label">Consumer Milestone</div>
-          <div class="desc">Non-friends-and-family paying customers — organic demand validated</div>
-        </div>
-        <div class="milestone">
-          <div class="label">Enterprise Milestone</div>
-          <div class="desc">At least one confirmed product-market fit signal — real enterprise pull</div>
-        </div>
-      </div>
-      <div class="divider animate-in" style="margin:1rem auto 1.5rem;"></div>
-      <p class="animate-in" style="text-align:center; color:var(--text-muted); max-width:500px; margin:0 auto;">
-        We are assembling early believers.<br>
-        To build carefully. To prove value.<br>
-        To scale only with signal.
-      </p>
-    </div>
-  </div>
 
 </div><!-- /deck -->
 
