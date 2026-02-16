@@ -1515,21 +1515,276 @@ ul.questions li:last-child { border-bottom: none; }
     </div>
   </div>
 
-  <!-- ═══════ SLIDE 13: CROSS-SECTOR ═══════ -->
+  <!-- ═══════ SLIDE 13: CROSS-SECTOR — VERTICAL MAP ═══════ -->
   <div class="slide" data-slide="12">
     <div class="slide-inner" style="text-align:center;">
       <h3 class="animate-in">Market Breadth</h3>
-      <h1 class="animate-in">Cross-Sector Relevance</h1>
-      <div class="tags animate-in">
-        <span class="tag">Consumer</span>
-        <span class="tag">Enterprise</span>
-        <span class="tag">Regulated Industries</span>
-        <span class="tag">Knowledge Work Teams</span>
+      <h1 class="animate-in">Cross-Sector <span class="gold">Relevance</span></h1>
+      <div class="diagram-full animate-in">
+        <svg viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <!-- Category glow filters -->
+            <filter id="glowCatGold" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feFlood flood-color="#d4a843" flood-opacity="0.3" result="color"/>
+              <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+              <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glowCatBlu" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feFlood flood-color="#3b82c4" flood-opacity="0.3" result="color"/>
+              <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+              <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glowCatEm" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feFlood flood-color="#2d8a6e" flood-opacity="0.3" result="color"/>
+              <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+              <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+            <filter id="glowVS" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+            <!-- Center wedge glow -->
+            <radialGradient id="wedgeGl" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#d4a843" stop-opacity="0.12"/>
+              <stop offset="70%" stop-color="#d4a843" stop-opacity="0.02"/>
+              <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+            </radialGradient>
+            <!-- Column background washes -->
+            <linearGradient id="cwGold" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#d4a843" stop-opacity="0.03"/>
+              <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="cwBlue" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3b82c4" stop-opacity="0.03"/>
+              <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="cwEmerald" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2d8a6e" stop-opacity="0.03"/>
+              <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- ══════════════════════════════════════════════════ -->
+          <!-- SUBTLE COLUMN WASHES                             -->
+          <!-- ══════════════════════════════════════════════════ -->
+          <rect x="15" y="55" width="310" height="480" rx="12" fill="url(#cwGold)"/>
+          <rect x="345" y="55" width="310" height="480" rx="12" fill="url(#cwBlue)"/>
+          <rect x="675" y="55" width="310" height="480" rx="12" fill="url(#cwEmerald)"/>
+
+          <!-- ══════════════════════════════════════════════════ -->
+          <!-- CATEGORY 1: REGULATED CONTINUITY (Left)          -->
+          <!-- ══════════════════════════════════════════════════ -->
+          <rect x="45" y="20" width="250" height="44" rx="10" fill="rgba(212,168,67,0.15)" stroke="#d4a843" stroke-width="1.5" filter="url(#glowCatGold)"/>
+          <text x="170" y="38" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="0.1em" fill="#d4a843">REGULATED CONTINUITY</text>
+          <text x="170" y="54" text-anchor="middle" font-size="9" font-weight="400" fill="#8899ab">Audit + Retention</text>
+
+          <!-- Trunk line -->
+          <line x1="170" y1="64" x2="170" y2="520" stroke="rgba(212,168,67,0.2)" stroke-width="1.2"/>
+
+          <!-- Vertical 1: Healthcare -->
+          <line x1="170" y1="105" x2="195" y2="105" stroke="rgba(212,168,67,0.3)" stroke-width="1"/>
+          <rect x="195" y="80" width="120" height="50" rx="8" fill="rgba(212,168,67,0.1)" stroke="rgba(212,168,67,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="255" y="101" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Healthcare</text>
+          <text x="255" y="118" text-anchor="middle" font-size="8" fill="#8899ab">Clinical + Admin AI</text>
+
+          <!-- Healthcare use cases -->
+          <line x1="170" y1="150" x2="65" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="30" y="138" width="135" height="24" rx="6" class="node-surface"/>
+          <text x="97" y="154" text-anchor="middle" font-size="8.5" fill="#8899ab">Interaction audit logs</text>
+
+          <line x1="170" y1="180" x2="65" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="30" y="168" width="135" height="24" rx="6" class="node-surface"/>
+          <text x="97" y="184" text-anchor="middle" font-size="8.5" fill="#8899ab">Clinical traceability</text>
+
+          <line x1="170" y1="210" x2="65" y2="210" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="30" y="198" width="135" height="24" rx="6" class="node-surface"/>
+          <text x="97" y="214" text-anchor="middle" font-size="8.5" fill="#8899ab">PHI-compliant routing</text>
+
+          <!-- Vertical 2: Legal -->
+          <line x1="170" y1="270" x2="195" y2="270" stroke="rgba(212,168,67,0.3)" stroke-width="1"/>
+          <rect x="195" y="245" width="120" height="50" rx="8" fill="rgba(212,168,67,0.1)" stroke="rgba(212,168,67,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="255" y="266" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Legal</text>
+          <text x="255" y="283" text-anchor="middle" font-size="8" fill="#8899ab">Professional Services</text>
+
+          <!-- Legal use cases -->
+          <line x1="170" y1="315" x2="65" y2="315" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="22" y="303" width="143" height="24" rx="6" class="node-surface"/>
+          <text x="93" y="319" text-anchor="middle" font-size="8.5" fill="#8899ab">Defensible audit trails</text>
+
+          <line x1="170" y1="345" x2="65" y2="345" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="22" y="333" width="143" height="24" rx="6" class="node-surface"/>
+          <text x="93" y="349" text-anchor="middle" font-size="8.5" fill="#8899ab">Prompt history logging</text>
+
+          <!-- Vertical 3: Finance -->
+          <line x1="170" y1="405" x2="195" y2="405" stroke="rgba(212,168,67,0.3)" stroke-width="1"/>
+          <rect x="195" y="380" width="120" height="50" rx="8" fill="rgba(212,168,67,0.1)" stroke="rgba(212,168,67,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="255" y="401" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Finance</text>
+          <text x="255" y="418" text-anchor="middle" font-size="8" fill="#8899ab">Banks + Investment</text>
+
+          <!-- Finance use cases -->
+          <line x1="170" y1="450" x2="65" y2="450" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="22" y="438" width="143" height="24" rx="6" class="node-surface"/>
+          <text x="93" y="454" text-anchor="middle" font-size="8.5" fill="#8899ab">Explainable AI usage</text>
+
+          <line x1="170" y1="480" x2="65" y2="480" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="22" y="468" width="143" height="24" rx="6" class="node-surface"/>
+          <text x="93" y="484" text-anchor="middle" font-size="8.5" fill="#8899ab">Regulatory compliance</text>
+
+          <!-- Vertical 4: Government (future) -->
+          <line x1="170" y1="520" x2="195" y2="520" stroke="rgba(212,168,67,0.3)" stroke-width="1"/>
+          <rect x="195" y="500" width="120" height="40" rx="8" fill="rgba(212,168,67,0.07)" stroke="rgba(212,168,67,0.2)" stroke-width="1" stroke-dasharray="4 2"/>
+          <text x="255" y="525" text-anchor="middle" font-size="10" font-weight="400" fill="#8899ab">Government</text>
+
+          <!-- ══════════════════════════════════════════════════ -->
+          <!-- CATEGORY 2: KNOWLEDGE COMPOUNDING (Center)       -->
+          <!-- ══════════════════════════════════════════════════ -->
+          <rect x="375" y="20" width="250" height="44" rx="10" fill="rgba(59,130,196,0.15)" stroke="#3b82c4" stroke-width="1.5" filter="url(#glowCatBlu)"/>
+          <text x="500" y="38" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="0.1em" fill="#3b82c4">KNOWLEDGE COMPOUNDING</text>
+          <text x="500" y="54" text-anchor="middle" font-size="9" font-weight="400" fill="#8899ab">Institutional Memory</text>
+
+          <!-- Trunk line -->
+          <line x1="500" y1="64" x2="500" y2="520" stroke="rgba(59,130,196,0.2)" stroke-width="1.2"/>
+
+          <!-- Vertical 1: Tech / Product Teams -->
+          <line x1="500" y1="105" x2="525" y2="105" stroke="rgba(59,130,196,0.3)" stroke-width="1"/>
+          <rect x="525" y="80" width="130" height="50" rx="8" fill="rgba(59,130,196,0.1)" stroke="rgba(59,130,196,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="590" y="101" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Tech Teams</text>
+          <text x="590" y="118" text-anchor="middle" font-size="8" fill="#8899ab">Product + Strategy</text>
+
+          <!-- Tech use cases -->
+          <line x1="500" y1="150" x2="395" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="355" y="138" width="140" height="24" rx="6" class="node-surface"/>
+          <text x="425" y="154" text-anchor="middle" font-size="8.5" fill="#8899ab">Shared AI workspaces</text>
+
+          <line x1="500" y1="180" x2="395" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="355" y="168" width="140" height="24" rx="6" class="node-surface"/>
+          <text x="425" y="184" text-anchor="middle" font-size="8.5" fill="#8899ab">Decision memory</text>
+
+          <line x1="500" y1="210" x2="395" y2="210" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="355" y="198" width="140" height="24" rx="6" class="node-surface"/>
+          <text x="425" y="214" text-anchor="middle" font-size="8.5" fill="#8899ab">Multi-model routing</text>
+
+          <!-- Vertical 2: Engineering / Dev -->
+          <line x1="500" y1="270" x2="525" y2="270" stroke="rgba(59,130,196,0.3)" stroke-width="1"/>
+          <rect x="525" y="245" width="130" height="50" rx="8" fill="rgba(59,130,196,0.1)" stroke="rgba(59,130,196,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="590" y="266" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Engineering</text>
+          <text x="590" y="283" text-anchor="middle" font-size="8" fill="#8899ab">Dev Organizations</text>
+
+          <!-- Engineering use cases -->
+          <line x1="500" y1="315" x2="395" y2="315" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="348" y="303" width="147" height="24" rx="6" class="node-surface"/>
+          <text x="421" y="319" text-anchor="middle" font-size="8.5" fill="#8899ab">Code-gen audit trails</text>
+
+          <line x1="500" y1="345" x2="395" y2="345" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="348" y="333" width="147" height="24" rx="6" class="node-surface"/>
+          <text x="421" y="349" text-anchor="middle" font-size="8.5" fill="#8899ab">Prompt libraries as IP</text>
+
+          <!-- Vertical 3: Consulting -->
+          <line x1="500" y1="405" x2="525" y2="405" stroke="rgba(59,130,196,0.3)" stroke-width="1"/>
+          <rect x="525" y="380" width="130" height="50" rx="8" fill="rgba(59,130,196,0.1)" stroke="rgba(59,130,196,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="590" y="401" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Consulting</text>
+          <text x="590" y="418" text-anchor="middle" font-size="8" fill="#8899ab">Strategy Firms</text>
+
+          <!-- Consulting use cases -->
+          <line x1="500" y1="450" x2="395" y2="450" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="348" y="438" width="147" height="24" rx="6" class="node-surface"/>
+          <text x="421" y="454" text-anchor="middle" font-size="8.5" fill="#8899ab">Knowledge compounding</text>
+
+          <line x1="500" y1="480" x2="395" y2="480" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="348" y="468" width="147" height="24" rx="6" class="node-surface"/>
+          <text x="421" y="484" text-anchor="middle" font-size="8.5" fill="#8899ab">Review workflows</text>
+
+          <!-- Vertical 4: AI Startups (future) -->
+          <line x1="500" y1="520" x2="525" y2="520" stroke="rgba(59,130,196,0.3)" stroke-width="1"/>
+          <rect x="525" y="500" width="130" height="40" rx="8" fill="rgba(59,130,196,0.07)" stroke="rgba(59,130,196,0.2)" stroke-width="1" stroke-dasharray="4 2"/>
+          <text x="590" y="525" text-anchor="middle" font-size="10" font-weight="400" fill="#8899ab">AI-Native Startups</text>
+
+          <!-- ══════════════════════════════════════════════════ -->
+          <!-- CATEGORY 3: HUMAN DEVELOPMENT (Right)            -->
+          <!-- ══════════════════════════════════════════════════ -->
+          <rect x="705" y="20" width="250" height="44" rx="10" fill="rgba(45,138,110,0.15)" stroke="#2d8a6e" stroke-width="1.5" filter="url(#glowCatEm)"/>
+          <text x="830" y="38" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="0.1em" fill="#2d8a6e">HUMAN DEVELOPMENT</text>
+          <text x="830" y="54" text-anchor="middle" font-size="9" font-weight="400" fill="#8899ab">Continuity + Oversight</text>
+
+          <!-- Trunk line -->
+          <line x1="830" y1="64" x2="830" y2="520" stroke="rgba(45,138,110,0.2)" stroke-width="1.2"/>
+
+          <!-- Vertical 1: Families (launch vertical) -->
+          <line x1="830" y1="105" x2="855" y2="105" stroke="rgba(45,138,110,0.3)" stroke-width="1"/>
+          <rect x="855" y="80" width="120" height="50" rx="8" fill="rgba(45,138,110,0.12)" stroke="rgba(45,138,110,0.4)" stroke-width="1.5" filter="url(#glowVS)"/>
+          <text x="915" y="101" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Families</text>
+          <text x="915" y="118" text-anchor="middle" font-size="8" fill="#2d8a6e">Launch vertical</text>
+
+          <!-- Families use cases -->
+          <line x1="830" y1="150" x2="725" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="138" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="154" text-anchor="middle" font-size="8.5" fill="#8899ab">Governance mode</text>
+
+          <line x1="830" y1="180" x2="725" y2="180" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="168" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="184" text-anchor="middle" font-size="8.5" fill="#8899ab">Parental oversight</text>
+
+          <line x1="830" y1="210" x2="725" y2="210" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="198" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="214" text-anchor="middle" font-size="8.5" fill="#8899ab">Shared sessions</text>
+
+          <!-- Vertical 2: Education -->
+          <line x1="830" y1="270" x2="855" y2="270" stroke="rgba(45,138,110,0.3)" stroke-width="1"/>
+          <rect x="855" y="245" width="120" height="50" rx="8" fill="rgba(45,138,110,0.1)" stroke="rgba(45,138,110,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="915" y="266" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Education</text>
+          <text x="915" y="283" text-anchor="middle" font-size="8" fill="#8899ab">Schools + Universities</text>
+
+          <!-- Education use cases -->
+          <line x1="830" y1="315" x2="725" y2="315" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="303" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="319" text-anchor="middle" font-size="8.5" fill="#8899ab">AI policy governance</text>
+
+          <line x1="830" y1="345" x2="725" y2="345" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="333" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="349" text-anchor="middle" font-size="8.5" fill="#8899ab">Longitudinal records</text>
+
+          <!-- Vertical 3: Coaching / Mental Health -->
+          <line x1="830" y1="405" x2="855" y2="405" stroke="rgba(45,138,110,0.3)" stroke-width="1"/>
+          <rect x="855" y="380" width="130" height="50" rx="8" fill="rgba(45,138,110,0.1)" stroke="rgba(45,138,110,0.35)" stroke-width="1" filter="url(#glowVS)"/>
+          <text x="920" y="401" text-anchor="middle" font-size="11" font-weight="500" fill="#e8ecf2">Coaching</text>
+          <text x="920" y="418" text-anchor="middle" font-size="8" fill="#8899ab">Mental Health</text>
+
+          <!-- Coaching use cases -->
+          <line x1="830" y1="450" x2="725" y2="450" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="438" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="454" text-anchor="middle" font-size="8.5" fill="#8899ab">Session continuity</text>
+
+          <line x1="830" y1="480" x2="725" y2="480" stroke="rgba(255,255,255,0.1)" stroke-width="0.8"/>
+          <rect x="688" y="468" width="137" height="24" rx="6" class="node-surface"/>
+          <text x="756" y="484" text-anchor="middle" font-size="8.5" fill="#8899ab">Supervision layer</text>
+
+          <!-- Vertical 4: Digital Estate (future) -->
+          <line x1="830" y1="520" x2="855" y2="520" stroke="rgba(45,138,110,0.3)" stroke-width="1"/>
+          <rect x="855" y="500" width="120" height="40" rx="8" fill="rgba(45,138,110,0.07)" stroke="rgba(45,138,110,0.2)" stroke-width="1" stroke-dasharray="4 2"/>
+          <text x="915" y="525" text-anchor="middle" font-size="10" font-weight="400" fill="#8899ab">Digital Estate</text>
+
+          <!-- ══════════════════════════════════════════════════ -->
+          <!-- CROSS-CONNECTIONS — Shared infrastructure         -->
+          <!-- ══════════════════════════════════════════════════ -->
+          <path d="M315,105 Q345,105 375,105" stroke="rgba(212,168,67,0.12)" stroke-width="0.8" fill="none" stroke-dasharray="3 4"/>
+          <path d="M655,105 Q675,105 705,105" stroke="rgba(59,130,196,0.12)" stroke-width="0.8" fill="none" stroke-dasharray="3 4"/>
+          <path d="M315,270 Q345,270 375,270" stroke="rgba(212,168,67,0.1)" stroke-width="0.7" fill="none" stroke-dasharray="3 4"/>
+          <path d="M655,270 Q675,270 705,270" stroke="rgba(59,130,196,0.1)" stroke-width="0.7" fill="none" stroke-dasharray="3 4"/>
+          <path d="M315,405 Q345,405 375,405" stroke="rgba(212,168,67,0.08)" stroke-width="0.6" fill="none" stroke-dasharray="3 5"/>
+          <path d="M655,405 Q675,405 705,405" stroke="rgba(59,130,196,0.08)" stroke-width="0.6" fill="none" stroke-dasharray="3 5"/>
+
+          <!-- ══════════════════════════════════════════════════ -->
+          <!-- BOTTOM WEDGE — The shared need                   -->
+          <!-- ══════════════════════════════════════════════════ -->
+          <ellipse cx="500" cy="570" rx="200" ry="30" fill="url(#wedgeGl)"/>
+          <line x1="200" y1="560" x2="800" y2="560" stroke="rgba(212,168,67,0.15)" stroke-width="1"/>
+          <text x="500" y="580" text-anchor="middle" font-size="11" font-weight="500" font-style="italic" fill="#d4a843">AI is influencing decisions. No structured continuity exists.</text>
+          <text x="500" y="600" text-anchor="middle" font-size="10" font-weight="400" fill="#566678">Every vertical shares the same gap — that's the wedge.</text>
+        </svg>
       </div>
-      <div class="divider animate-in" style="margin:1.5rem auto;"></div>
-      <p class="animate-in" style="text-align:center; font-size:1.2rem; color:var(--text-primary);">
-        The need is identical:<br><em style="color:var(--gold);">Continuity of AI-assisted thought.</em>
-      </p>
     </div>
   </div>
 
