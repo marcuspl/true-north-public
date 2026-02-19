@@ -1001,8 +1001,75 @@ ul.questions li:last-child { border-bottom: none; }
     </div>
   </div>
 
-  <!-- ═══════ SLIDE 14: PRICING ═══════ -->
+  <!-- ═══════ SLIDE 14: THE MOST UNDERVALUED ASSET CLASS ═══════ -->
   <div class="slide" data-slide="13">
+    <div class="slide-inner" style="text-align:center;">
+      <h3 class="animate-in">The Weight of This</h3>
+      <h1 class="animate-in">More personal than your <span class="gold">medical records.</span></h1>
+      <div style="max-width:700px; margin:0 auto;">
+        <ul class="questions animate-in">
+          <li>Your medical records describe your body. Your AI logs describe your <strong style="color:var(--text-primary);">mind</strong>.</li>
+          <li>HIPAA protects a doctor&rsquo;s notes about you. Nothing protects the thoughts <strong style="color:var(--text-primary);">you actually had</strong>.</li>
+          <li>Your search history shows what you looked for. Your AI history shows how you <strong style="color:var(--text-primary);">think</strong>.</li>
+          <li>These logs are the most complete record of human&ndash;AI reasoning ever created.</li>
+        </ul>
+      </div>
+      <div class="diagram animate-in" style="max-width:540px;">
+        <svg viewBox="0 0 540 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="g14" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+            </filter>
+            <filter id="g14glow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="12" result="blur"/>
+              <feFlood flood-color="#d4a843" flood-opacity="0.3" result="color"/>
+              <feComposite in="color" in2="blur" operator="in" result="glow"/>
+              <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Layer 1: Health Records (smallest, blue) -->
+          <rect x="150" y="20" width="240" height="50" rx="10" class="node-blue" filter="url(#g14)"/>
+          <text x="200" y="50" text-anchor="middle" font-size="13" font-weight="500" class="label-primary">Health Records</text>
+          <rect x="395" y="28" width="120" height="34" rx="8" class="node-emerald" filter="url(#g14)"/>
+          <text x="455" y="50" text-anchor="middle" font-size="11" font-weight="600" fill="#2d8a6e">HIPAA Protected</text>
+          <!-- Connector -->
+          <line x1="270" y1="70" x2="270" y2="100" class="connector" stroke-dasharray="4 3"/>
+          <!-- Layer 2: Financial Data (medium, emerald) -->
+          <rect x="120" y="100" width="300" height="60" rx="12" class="node-emerald" filter="url(#g14)"/>
+          <text x="200" y="136" text-anchor="middle" font-size="14" font-weight="500" class="label-primary">Financial Data</text>
+          <rect x="425" y="112" width="100" height="36" rx="8" class="node-emerald" filter="url(#g14)"/>
+          <text x="475" y="135" text-anchor="middle" font-size="11" font-weight="600" fill="#2d8a6e">SOX / PCI</text>
+          <!-- Connector -->
+          <line x1="270" y1="160" x2="270" y2="195" class="connector" stroke-dasharray="4 3"/>
+          <!-- Layer 3: AI Conversations (largest, gold, glow) -->
+          <rect x="70" y="195" width="400" height="80" rx="14" class="node-gold" filter="url(#g14glow)"/>
+          <text x="200" y="235" text-anchor="middle" font-size="16" font-weight="600" class="label-primary">AI Conversations</text>
+          <text x="200" y="258" text-anchor="middle" font-size="11" class="label-gold">Your thoughts, reasoning, inner life</text>
+          <!-- Unprotected label (coral, dashed border) -->
+          <rect x="395" y="215" width="130" height="40" rx="8" fill="rgba(224,85,85,0.08)" stroke="#e05555" stroke-width="1.5" stroke-dasharray="6 3"/>
+          <text x="460" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#e05555">Unprotected</text>
+          <!-- Scale labels on the left -->
+          <text x="45" y="50" text-anchor="middle" font-size="9" font-weight="600" letter-spacing="0.08em" class="label-muted">LESS</text>
+          <text x="45" y="240" text-anchor="middle" font-size="9" font-weight="600" letter-spacing="0.08em" class="label-gold">MORE</text>
+          <line x1="45" y1="60" x2="45" y2="220" class="connector-gold" marker-end="url(#a14)"/>
+          <defs>
+            <marker id="a14" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <path d="M0,0 L8,3 L0,6" fill="rgba(212,168,67,0.5)"/>
+            </marker>
+          </defs>
+          <!-- Footer -->
+          <text x="270" y="330" text-anchor="middle" font-size="11" font-style="italic" class="label-muted">Sensitivity &amp; value increase &mdash; protection disappears</text>
+        </svg>
+      </div>
+      <div class="thesis animate-in" style="font-size:1.8rem; margin-top:2rem;">
+        Your AI conversations are humanity&rsquo;s most undervalued asset class &mdash; and right now, they belong to everyone except you.
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════ SLIDE 15: PRICING ═══════ -->
+  <div class="slide" data-slide="14">
     <div class="slide-inner" style="text-align:center;">
       <h3 class="animate-in">Get Started</h3>
       <h1 class="animate-in">Simple, honest <span class="gold">pricing</span></h1>
@@ -1048,8 +1115,8 @@ ul.questions li:last-child { border-bottom: none; }
     </div>
   </div>
 
-  <!-- ═══════ SLIDE 15: CLOSING / VISION ═══════ -->
-  <div class="slide slide-title-bg" data-slide="14">
+  <!-- ═══════ SLIDE 16: CLOSING / VISION ═══════ -->
+  <div class="slide slide-title-bg" data-slide="15">
     <div class="slide-inner" style="text-align:center;">
       <div class="north-star animate-in" style="opacity:0.4;">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
