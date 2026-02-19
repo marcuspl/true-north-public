@@ -401,6 +401,17 @@ ul.questions li:last-child { border-bottom: none; }
   font-variant-numeric: tabular-nums;
 }
 
+.slide-disclaimer {
+  position: fixed;
+  bottom: 26px;
+  left: 32px;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+  z-index: 100;
+}
+
 /* ── Decorative Star ── */
 .north-star {
   width: 60px; height: 60px;
@@ -1032,7 +1043,8 @@ ul.questions li:last-child { border-bottom: none; }
           </ul>
         </div>
       </div>
-      <div class="cta-text animate-in">Join the waitlist at <strong>truenorth.ai</strong></div>
+      <p class="animate-in" style="font-size:0.85rem; color:var(--text-muted); margin-top:1rem; text-align:center;">Pricing is preliminary and subject to change.</p>
+      <div class="cta-text animate-in">Join the waitlist at <strong>truenorthfamily.ai</strong></div>
     </div>
   </div>
 
@@ -1069,6 +1081,7 @@ ul.questions li:last-child { border-bottom: none; }
 <!-- Navigation dots -->
 <div class="nav-dots" id="navDots"></div>
 <div class="slide-counter" id="slideCounter"></div>
+<div class="slide-disclaimer">DRAFT &mdash; Preliminary &amp; Confidential</div>
 
 <script>
 (function() {
