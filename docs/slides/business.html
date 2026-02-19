@@ -66,7 +66,7 @@ html, body {
 }
 
 .slide.slide-title-bg {
-  background: url('dark-sea-bg.png') center/cover no-repeat;
+  background: linear-gradient(rgba(12, 18, 32, 0.45) 0%, rgba(12, 18, 32, 0.15) 40%, rgba(12, 18, 32, 0.5) 100%), url('dark-sea-bg.png') center/cover no-repeat;
 }
 
 .slide-inner {
@@ -110,10 +110,11 @@ h1 {
 
 h1.hero {
   font-size: 4.2rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5);
 }
 
 h1 .gold { color: var(--gold); }
-h1 em { font-style: italic; color: var(--text-secondary); }
+h1 em { font-style: italic; color: var(--text-secondary); text-shadow: 0 2px 20px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5); }
 
 h2 {
   font-family: 'DM Serif Display', serif;
