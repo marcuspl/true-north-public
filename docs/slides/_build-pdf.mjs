@@ -6,11 +6,16 @@ import { readFileSync, writeFileSync, unlinkSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// Accept CLI arg: "business" or "consumer" (default)
-const deckArg = (process.argv[2] || 'consumer').toLowerCase();
-const isBusiness = deckArg === 'business';
-const htmlFile = isBusiness ? 'business.html' : 'investor.html';
-const pdfName = isBusiness ? 'True-North-Business-Deck.pdf' : 'True-North-Pitch-Deck.pdf';
+// Accept CLI arg: "investor" (default), "business", or "consumer"
+const deckArg = (process.argv[2] || 'investor').toLowerCase();
+const DECKS = {
+  investor:  { html: 'investor.html',  pdf: 'True-North-Pitch-Deck.pdf' },
+  business:  { html: 'business.html',  pdf: 'True-North-Business-Deck.pdf' },
+  consumer:  { html: 'consumer.html',  pdf: 'True-North-Consumer-Deck.pdf' },
+};
+const deck = DECKS[deckArg] || DECKS.investor;
+const htmlFile = deck.html;
+const pdfName = deck.pdf;
 
 const htmlPath = join(__dirname, htmlFile);
 const outputPath = join(__dirname, pdfName);
