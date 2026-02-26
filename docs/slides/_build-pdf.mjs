@@ -12,12 +12,13 @@ const DECKS = {
   investor:  { html: 'investor.html',  pdf: 'True-North-Pitch-Deck.pdf' },
   business:  { html: 'business.html',  pdf: 'True-North-Business-Deck.pdf' },
   consumer:  { html: 'consumer.html',  pdf: 'True-North-Consumer-Deck.pdf' },
+  gtm:       { html: '/tmp/gtm_original.html', pdf: 'True-North-GTM-Deck.pdf', absolute: true },
 };
 const deck = DECKS[deckArg] || DECKS.investor;
 const htmlFile = deck.html;
 const pdfName = deck.pdf;
 
-const htmlPath = join(__dirname, htmlFile);
+const htmlPath = deck.absolute ? htmlFile : join(__dirname, htmlFile);
 const outputPath = join(__dirname, pdfName);
 
 const WIDTH = 1920;
