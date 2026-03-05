@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>True North Systems</title>
+<title>True North — Healthcare</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
   --gold-glow: rgba(212,168,67,0.08);
   --blue-accent: #3b82c4;
   --text-primary: #e8ecf2;
-  --text-secondary: #8899ab;
-  --text-muted: #566678;
+  --text-secondary: #a8b9ca;
+  --text-muted: #6e8194;
   --border: rgba(255,255,255,0.08);
   --border-gold: rgba(212,168,67,0.3);
 }
@@ -44,9 +44,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 60px 32px;
-  background:
-    linear-gradient(rgba(12, 18, 32, 0.85), rgba(12, 18, 32, 0.85)),
-    url('slides/dark-sea-bg.png') center/cover no-repeat;
 }
 
 /* Ambient glow */
@@ -79,7 +76,6 @@ body::after {
   text-align: center;
 }
 
-/* North Star */
 .north-star {
   width: 60px; height: 60px;
   margin-bottom: 2rem;
@@ -109,8 +105,18 @@ h1 .gold { color: var(--gold); }
   border: 1px solid var(--gold-dim);
   border-radius: 100px;
   padding: 0.45em 1.6em;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
+
+.back-link {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--text-secondary); }
 
 .divider {
   width: 60px;
@@ -120,7 +126,16 @@ h1 .gold { color: var(--gold); }
   opacity: 0.5;
 }
 
-/* Card grid */
+.section-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -173,7 +188,7 @@ h1 .gold { color: var(--gold); }
 
 .card-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -206,7 +221,6 @@ h1 .gold { color: var(--gold); }
   color: var(--text-primary);
 }
 
-/* Footer */
 .footer {
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -216,7 +230,6 @@ h1 .gold { color: var(--gold); }
   text-align: center;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   body { padding: 40px 20px; }
   h1 { font-size: 2.4rem; }
@@ -244,58 +257,96 @@ h1 .gold { color: var(--gold); }
     </svg>
   </div>
 
-  <h1>True North <span class="gold">Systems</span></h1>
-  <div class="subtitle">Trust and Continuity for the AI Era</div>
+  <h1>True North <span class="gold">Continuity</span></h1>
+  <div class="subtitle">Enterprise Healthcare</div>
+  <a href="../" class="back-link">&larr; Back to all materials</a>
   <div class="divider"></div>
 
+  <div class="section-label">Presentations</div>
   <div class="grid">
 
     <div class="card">
-      <h3>The Thesis</h3>
-      <h2>Investor Deck</h2>
-      <p>Infrastructure, architecture, and the dual-surface strategy — how one continuity layer serves families, businesses, and high-compliance enterprise institutions.</p>
+      <h3>Investor</h3>
+      <h2>Healthcare Investor Deck</h2>
+      <p>The thesis, architecture, differentiation, and market opportunity for intrusion-safe healthcare records.</p>
       <div class="card-links">
-        <a href="slides/investor.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Pitch-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="slides/investor.html" class="btn-view">View Deck</a>
+        <a href="slides/True-North-Healthcare-Investor-Deck.pdf" class="btn-pdf">PDF</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>For Families</h3>
-      <h2>Consumer App</h2>
-      <p>Your family's AI companion — shared sessions, parental oversight, and conversations that stay yours.</p>
+      <h3>CIO</h3>
+      <h2>CIO Operational Brief</h2>
+      <p>Exfiltration protection, AD-independent architecture, HIPAA positioning, and pilot details for hospital CIOs.</p>
       <div class="card-links">
-        <a href="slides/consumer.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Consumer-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="slides/cio.html" class="btn-view">View Deck</a>
+        <a href="slides/True-North-CIO-Deck.pdf" class="btn-pdf">PDF</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>For Small Business</h3>
-      <h2>Business App</h2>
-      <p>AI continuity for small and mid-size teams — client context, coaching, and governance without the enterprise overhead.</p>
+      <h3>CMIO</h3>
+      <h2>Clinical Continuity Brief</h2>
+      <p>Clinical-first narrative: what happens when Epic goes down, and how continuity changes the outcome for doctors.</p>
       <div class="card-links">
-        <a href="slides/business.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Business-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="slides/cmio.html" class="btn-view">View Deck</a>
+        <a href="slides/True-North-CMIO-Deck.pdf" class="btn-pdf">PDF</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>The Playbook</h3>
-      <h2>Go to Market</h2>
-      <p>The playbook: two parallel tracks, community-first acquisition, and enterprise BD.</p>
+      <h3>Internal</h3>
+      <h2>BD Playbook</h2>
+      <p>Internal business development brief: messaging pillars, competitive landscape, objection handling, and guardrails.</p>
       <div class="card-links">
-        <a href="slides/gtm.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-GTM-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="slides/bd.html" class="btn-view">View Deck</a>
+        <a href="slides/True-North-BD-Deck.pdf" class="btn-pdf">PDF</a>
       </div>
     </div>
 
-    <div class="card" style="grid-column: 1 / -1; border-color: var(--border-gold);">
-      <h3>Enterprise Healthcare</h3>
-      <h2>True North Continuity</h2>
-      <p>Intrusion-safe healthcare records — presentations and briefs for investors, CIOs, CMIOs, and internal BD. Four slide decks, four two-page briefs.</p>
+  </div>
+
+  <div class="section-label">Two-Page Briefs</div>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Investor</h3>
+      <h2>Investor 2-Pager</h2>
+      <p>Condensed investment thesis with architecture overview, market sizing, and competitive positioning.</p>
       <div class="card-links">
-        <a href="healthcare/" class="btn-view">View All Materials</a>
+        <a href="briefs/investor.html" class="btn-view">View Brief</a>
+        <a href="briefs/True-North-Healthcare-Investor-Brief.pdf" class="btn-pdf">PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>CIO</h3>
+      <h2>CIO 2-Pager</h2>
+      <p>Operational summary for hospital CIOs: threat landscape, architecture, compliance, and pilot pathway.</p>
+      <div class="card-links">
+        <a href="briefs/cio.html" class="btn-view">View Brief</a>
+        <a href="briefs/True-North-CIO-Brief.pdf" class="btn-pdf">PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>CMIO</h3>
+      <h2>CMIO 2-Pager</h2>
+      <p>Clinical continuity brief for CMIOs: the problem, the promise, and what changes for doctors.</p>
+      <div class="card-links">
+        <a href="briefs/cmio.html" class="btn-view">View Brief</a>
+        <a href="briefs/True-North-CMIO-Brief.pdf" class="btn-pdf">PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Internal</h3>
+      <h2>BD 2-Pager</h2>
+      <p>Internal reference: product pillars, competitive table, contacts, and guardrails for the sales team.</p>
+      <div class="card-links">
+        <a href="briefs/bd.html" class="btn-view">View Brief</a>
+        <a href="briefs/True-North-BD-Brief.pdf" class="btn-pdf">PDF</a>
       </div>
     </div>
 
