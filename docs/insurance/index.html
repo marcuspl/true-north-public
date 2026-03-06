@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>True North Systems</title>
+<title>True North — Insurance</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
   --gold-glow: rgba(212,168,67,0.08);
   --blue-accent: #3b82c4;
   --text-primary: #e8ecf2;
-  --text-secondary: #8899ab;
-  --text-muted: #566678;
+  --text-secondary: #a8b9ca;
+  --text-muted: #6e8194;
   --border: rgba(255,255,255,0.08);
   --border-gold: rgba(212,168,67,0.3);
 }
@@ -44,9 +44,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 60px 32px;
-  background:
-    linear-gradient(rgba(12, 18, 32, 0.85), rgba(12, 18, 32, 0.85)),
-    url('slides/dark-sea-bg.png') center/cover no-repeat;
 }
 
 /* Ambient glow */
@@ -79,7 +76,6 @@ body::after {
   text-align: center;
 }
 
-/* North Star */
 .north-star {
   width: 60px; height: 60px;
   margin-bottom: 2rem;
@@ -109,8 +105,18 @@ h1 .gold { color: var(--gold); }
   border: 1px solid var(--gold-dim);
   border-radius: 100px;
   padding: 0.45em 1.6em;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
+
+.back-link {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--text-secondary); }
 
 .divider {
   width: 60px;
@@ -120,7 +126,16 @@ h1 .gold { color: var(--gold); }
   opacity: 0.5;
 }
 
-/* Card grid */
+.section-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -173,7 +188,7 @@ h1 .gold { color: var(--gold); }
 
 .card-links {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
 }
 
@@ -196,17 +211,6 @@ h1 .gold { color: var(--gold); }
   color: var(--bg-deep);
 }
 
-.btn-pdf {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-}
-.btn-pdf:hover {
-  border-color: var(--text-secondary);
-  color: var(--text-primary);
-}
-
-/* Footer */
 .footer {
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -216,7 +220,6 @@ h1 .gold { color: var(--gold); }
   text-align: center;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   body { padding: 40px 20px; }
   h1 { font-size: 2.4rem; }
@@ -244,67 +247,84 @@ h1 .gold { color: var(--gold); }
     </svg>
   </div>
 
-  <h1>True North <span class="gold">Systems</span></h1>
-  <div class="subtitle">Trust and Continuity for the AI Era</div>
+  <h1>True North <span class="gold">Continuity</span></h1>
+  <div class="subtitle">Enterprise Insurance</div>
+  <a href="../" class="back-link">&larr; Back to all materials</a>
   <div class="divider"></div>
 
+  <div class="section-label">Presentation</div>
+  <div class="grid">
+
+    <div class="card" style="grid-column: 1 / -1;">
+      <h3>Overview</h3>
+      <h2>Insurance Vertical Presentation</h2>
+      <p>The full case for distributed encrypted record storage in insurance — the dual thesis (own risk + underwriting meta-case), architecture, market sizing, and go-to-market strategy.</p>
+      <div class="card-links">
+        <a href="presentation.html" class="btn-view">View Presentation</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-label">Two-Page Briefs</div>
   <div class="grid">
 
     <div class="card">
-      <h3>The Thesis</h3>
-      <h2>Investor Deck</h2>
-      <p>Infrastructure, architecture, and the dual-surface strategy — how one continuity layer serves families, businesses, and high-compliance enterprise institutions.</p>
+      <h3>Investor / VC</h3>
+      <h2>VC 2-Pager</h2>
+      <p>The investment thesis: dual revenue surface, flywheel economics, TAM, and competitive moat in the insurance vertical.</p>
       <div class="card-links">
-        <a href="slides/investor.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Pitch-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="vc-2-pager.html" class="btn-view">View Brief</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>For Families</h3>
-      <h2>Consumer App</h2>
-      <p>Your family's AI companion — shared sessions, parental oversight, and conversations that stay yours.</p>
+      <h3>CISO</h3>
+      <h2>CISO 2-Pager</h2>
+      <p>For insurance CISOs: ransomware exposure, AD-independent architecture, regulatory positioning, and the compliance case.</p>
       <div class="card-links">
-        <a href="slides/consumer.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Consumer-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="ciso-2-pager.html" class="btn-view">View Brief</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>For Small Business</h3>
-      <h2>Business App</h2>
-      <p>AI continuity for small and mid-size teams — client context, coaching, and governance without the enterprise overhead.</p>
+      <h3>Underwriting</h3>
+      <h2>CUO 2-Pager</h2>
+      <p>For Chief Underwriting Officers: the meta-case — how policyholder adoption reduces claims frequency and improves loss ratios.</p>
       <div class="card-links">
-        <a href="slides/business.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Business-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="cuo-2-pager.html" class="btn-view">View Brief</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>The Playbook</h3>
-      <h2>Go to Market</h2>
-      <p>The playbook: two parallel tracks, community-first acquisition, and enterprise BD.</p>
+      <h3>Internal</h3>
+      <h2>BD Internal 2-Pager</h2>
+      <p>Internal business development playbook: segment rankings, deal sizing, procurement cycles, and silo-bridging strategy.</p>
       <div class="card-links">
-        <a href="slides/gtm.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-GTM-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="bd-internal-2-pager.html" class="btn-view">View Brief</a>
       </div>
     </div>
 
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Enterprise Healthcare</h3>
-      <h2>True North Continuity</h2>
-      <p>Intrusion-safe healthcare records — presentations and briefs for investors, CIOs, CMIOs, and internal BD. Four slide decks, four two-page briefs.</p>
+    <div class="card">
+      <h3>InsurTech</h3>
+      <h2>InsurTech 2-Pager</h2>
+      <p>For InsurTech partners and cloud-native carriers: API integration, embedded security, and the technology partnership model.</p>
       <div class="card-links">
-        <a href="healthcare/" class="btn-view">View All Materials</a>
+        <a href="insurtech-2-pager.html" class="btn-view">View Brief</a>
       </div>
     </div>
 
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Enterprise Insurance</h3>
-      <h2>True North Continuity</h2>
-      <p>The dual thesis — insurers as buyers and as channel. Presentation, five audience-specific 2-pagers (VC, CISO, CUO, BD, InsurTech), and research references.</p>
+  </div>
+
+  <div class="section-label">Research</div>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Reference</h3>
+      <h2>References &amp; Sources</h2>
+      <p>All external sources cited across the insurance research pipeline: industry reports, regulatory frameworks, breach data, and competitive intelligence.</p>
       <div class="card-links">
-        <a href="insurance/" class="btn-view">View All Materials</a>
+        <a href="references.html" class="btn-view">View References</a>
       </div>
     </div>
 
