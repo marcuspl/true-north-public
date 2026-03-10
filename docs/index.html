@@ -237,7 +237,7 @@ h1 .gold { color: var(--gold); }
   body { padding: 40px 20px; }
   h1 { font-size: 2.4rem; }
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 1rem;
   }
 }
@@ -278,12 +278,12 @@ h1 .gold { color: var(--gold); }
 
   </div>
 
-  <!-- Enterprise verticals -->
-  <div class="grid" style="margin-bottom: 1.5rem;">
+  <!-- Enterprise verticals — equal 3-column -->
+  <div class="grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 1.5rem;">
 
     <div class="card" style="border-color: var(--border-gold);">
       <h3>Enterprise Healthcare</h3>
-      <h2>True North Continuity</h2>
+      <h2>True North Continuity: Healthcare</h2>
       <p>Intrusion-safe healthcare records — presentations and briefs for investors, CIOs, CMIOs, and internal BD. Four slide decks, four two-page briefs.</p>
       <div class="card-links">
         <a href="healthcare/" class="btn-view">View All Materials</a>
@@ -292,16 +292,16 @@ h1 .gold { color: var(--gold); }
 
     <div class="card" style="border-color: var(--border-gold);">
       <h3>Enterprise Insurance</h3>
-      <h2>True North Continuity</h2>
+      <h2>True North Continuity: Insurance</h2>
       <p>The dual thesis — insurers as buyers and as channel. Presentation, five audience-specific 2-pagers (VC, CISO, CUO, BD, InsurTech), and research references.</p>
       <div class="card-links">
         <a href="insurance/" class="btn-view">View All Materials</a>
       </div>
     </div>
 
-    <div class="card" style="grid-column: 1 / -1; border-color: var(--border-gold);">
+    <div class="card" style="border-color: var(--border-gold);">
       <h3>Enterprise Legal</h3>
-      <h2>True North Relay Network</h2>
+      <h2>True North Continuity: Legal</h2>
       <p>Privilege-preserving infrastructure for law firms — investor pitch, customer pitch (AmLaw 200 + Fortune 500 GC), expert witness materials, and research references. FRE 502(b), ABA 477R/483, distributed secret sharing.</p>
       <div class="card-links">
         <a href="enterprise-legal/" class="btn-view">View All Materials</a>
