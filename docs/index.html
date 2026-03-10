@@ -216,6 +216,22 @@ h1 .gold { color: var(--gold); }
   text-align: center;
 }
 
+/* Section separator */
+.section-sep {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1rem 0 2.5rem;
+  opacity: 0.6;
+}
+.section-sep-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   body { padding: 40px 20px; }
@@ -248,47 +264,22 @@ h1 .gold { color: var(--gold); }
   <div class="subtitle">Trust and Continuity for the AI Era</div>
   <div class="divider"></div>
 
-  <div class="grid">
+  <!-- Consumer AI Chat — lead card (full width) -->
+  <div class="grid" style="margin-bottom: 1.5rem;">
 
-    <div class="card">
-      <h3>The Thesis</h3>
-      <h2>Investor Deck</h2>
-      <p>Infrastructure, architecture, and the dual-surface strategy — how one continuity layer serves families, businesses, and high-compliance enterprise institutions.</p>
+    <div class="card" style="grid-column: 1 / -1; border-color: var(--border-gold);">
+      <h3>Consumer AI Chat</h3>
+      <h2>True North Family AI</h2>
+      <p>Family-aligned AI chat — the blue ocean pitch deck, investor summary, and consumer 2-pager. Multi-model safety, world-view alignment, deep-linking virality. $600M SAM, LTV/CAC 30–50x.</p>
       <div class="card-links">
-        <a href="slides/investor.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Pitch-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="consumer-ai-chat/" class="btn-view">View All Materials</a>
       </div>
     </div>
 
-    <div class="card">
-      <h3>For Families</h3>
-      <h2>Consumer App</h2>
-      <p>Your family's AI companion — shared sessions, parental oversight, and conversations that stay yours.</p>
-      <div class="card-links">
-        <a href="slides/consumer.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Consumer-Deck.pdf" class="btn-pdf">Download PDF</a>
-      </div>
-    </div>
+  </div>
 
-    <div class="card">
-      <h3>For Small Business</h3>
-      <h2>Business App</h2>
-      <p>AI continuity for small and mid-size teams — client context, coaching, and governance without the enterprise overhead.</p>
-      <div class="card-links">
-        <a href="slides/business.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Business-Deck.pdf" class="btn-pdf">Download PDF</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>The Playbook</h3>
-      <h2>Go to Market</h2>
-      <p>The playbook: two parallel tracks, community-first acquisition, and enterprise BD.</p>
-      <div class="card-links">
-        <a href="slides/gtm.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-GTM-Deck.pdf" class="btn-pdf">Download PDF</a>
-      </div>
-    </div>
+  <!-- Enterprise verticals -->
+  <div class="grid" style="margin-bottom: 1.5rem;">
 
     <div class="card" style="border-color: var(--border-gold);">
       <h3>Enterprise Healthcare</h3>
@@ -308,7 +299,7 @@ h1 .gold { color: var(--gold); }
       </div>
     </div>
 
-    <div class="card" style="border-color: var(--border-gold);">
+    <div class="card" style="grid-column: 1 / -1; border-color: var(--border-gold);">
       <h3>Enterprise Legal</h3>
       <h2>True North Relay Network</h2>
       <p>Privilege-preserving infrastructure for law firms — investor pitch, customer pitch (AmLaw 200 + Fortune 500 GC), expert witness materials, and research references. FRE 502(b), ABA 477R/483, distributed secret sharing.</p>
@@ -317,12 +308,31 @@ h1 .gold { color: var(--gold); }
       </div>
     </div>
 
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Consumer AI Chat</h3>
-      <h2>True North Family AI</h2>
-      <p>Family-aligned AI chat — the blue ocean pitch deck, investor summary, and consumer 2-pager. Multi-model safety, world-view alignment, deep-linking virality. $600M SAM, LTV/CAC 30–50x, $500K seed ask.</p>
+  </div>
+
+  <hr class="section-sep">
+  <div class="section-sep-label">Foundation materials</div>
+
+  <!-- Original decks -->
+  <div class="grid">
+
+    <div class="card">
+      <h3>The Thesis</h3>
+      <h2>Investor Deck</h2>
+      <p>Infrastructure, architecture, and the dual-surface strategy — how one continuity layer serves families, businesses, and high-compliance enterprise institutions.</p>
       <div class="card-links">
-        <a href="consumer-ai-chat/" class="btn-view">View All Materials</a>
+        <a href="slides/investor.html" class="btn-view">View Online</a>
+        <a href="slides/True-North-Pitch-Deck.pdf" class="btn-pdf">Download PDF</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>The Playbook</h3>
+      <h2>Go to Market</h2>
+      <p>The playbook: two parallel tracks, community-first acquisition, and enterprise BD.</p>
+      <div class="card-links">
+        <a href="slides/gtm.html" class="btn-view">View Online</a>
+        <a href="slides/True-North-GTM-Deck.pdf" class="btn-pdf">Download PDF</a>
       </div>
     </div>
 
