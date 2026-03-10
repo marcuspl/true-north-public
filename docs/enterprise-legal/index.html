@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>True North Systems</title>
+<title>True North — Legal</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
   --gold-glow: rgba(212,168,67,0.08);
   --blue-accent: #3b82c4;
   --text-primary: #e8ecf2;
-  --text-secondary: #8899ab;
-  --text-muted: #566678;
+  --text-secondary: #a8b9ca;
+  --text-muted: #6e8194;
   --border: rgba(255,255,255,0.08);
   --border-gold: rgba(212,168,67,0.3);
 }
@@ -34,7 +34,6 @@ html, body {
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -44,12 +43,8 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 60px 32px;
-  background:
-    linear-gradient(rgba(12, 18, 32, 0.85), rgba(12, 18, 32, 0.85)),
-    url('slides/dark-sea-bg.png') center/cover no-repeat;
 }
 
-/* Ambient glow */
 body::before {
   content: '';
   position: fixed;
@@ -79,12 +74,7 @@ body::after {
   text-align: center;
 }
 
-/* North Star */
-.north-star {
-  width: 60px; height: 60px;
-  margin-bottom: 2rem;
-  opacity: 0.7;
-}
+.north-star { width: 60px; height: 60px; margin-bottom: 2rem; opacity: 0.7; }
 .north-star svg { width: 100%; height: 100%; }
 
 h1 {
@@ -109,18 +99,31 @@ h1 .gold { color: var(--gold); }
   border: 1px solid var(--gold-dim);
   border-radius: 100px;
   padding: 0.45em 1.6em;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
-.divider {
-  width: 60px;
-  height: 1px;
-  background: var(--gold);
-  margin: 0 auto 3rem;
-  opacity: 0.5;
+.back-link {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--text-secondary); }
+
+.divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 3rem; opacity: 0.5; }
+
+.section-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 1.2rem;
 }
 
-/* Card grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -139,10 +142,7 @@ h1 .gold { color: var(--gold); }
   display: flex;
   flex-direction: column;
 }
-.card:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-gold);
-}
+.card:hover { background: var(--bg-card-hover); border-color: var(--border-gold); }
 
 .card h3 {
   font-family: 'Outfit', sans-serif;
@@ -171,11 +171,7 @@ h1 .gold { color: var(--gold); }
   flex: 1;
 }
 
-.card-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+.card-links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
 
 .card-links a {
   font-size: 0.82rem;
@@ -187,26 +183,9 @@ h1 .gold { color: var(--gold); }
   transition: background 0.2s, color 0.2s;
 }
 
-.btn-view {
-  background: var(--gold-dim);
-  color: var(--gold);
-}
-.btn-view:hover {
-  background: var(--gold);
-  color: var(--bg-deep);
-}
+.btn-view { background: var(--gold-dim); color: var(--gold); }
+.btn-view:hover { background: var(--gold); color: var(--bg-deep); }
 
-.btn-pdf {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-}
-.btn-pdf:hover {
-  border-color: var(--text-secondary);
-  color: var(--text-primary);
-}
-
-/* Footer */
 .footer {
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -216,14 +195,10 @@ h1 .gold { color: var(--gold); }
   text-align: center;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   body { padding: 40px 20px; }
   h1 { font-size: 2.4rem; }
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+  .grid { grid-template-columns: 1fr; gap: 1rem; }
 }
 </style>
 </head>
@@ -244,85 +219,52 @@ h1 .gold { color: var(--gold); }
     </svg>
   </div>
 
-  <h1>True North <span class="gold">Systems</span></h1>
-  <div class="subtitle">Trust and Continuity for the AI Era</div>
+  <h1>True North <span class="gold">Relay Network</span></h1>
+  <div class="subtitle">Enterprise Legal</div>
+  <a href="../" class="back-link">&larr; Back to all materials</a>
   <div class="divider"></div>
 
+  <div class="section-label">Presentations</div>
   <div class="grid">
 
     <div class="card">
-      <h3>The Thesis</h3>
-      <h2>Investor Deck</h2>
-      <p>Infrastructure, architecture, and the dual-surface strategy — how one continuity layer serves families, businesses, and high-compliance enterprise institutions.</p>
+      <h3>Investor / VC</h3>
+      <h2>Investor Pitch</h2>
+      <p>The investment thesis for distributed privilege-preserving infrastructure in legal — privilege preservation, distributed secret sharing architecture, market sizing across law firms and litigation, and the funding ask.</p>
       <div class="card-links">
-        <a href="slides/investor.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Pitch-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="investor-pitch.html" class="btn-view">View Pitch</a>
       </div>
     </div>
 
     <div class="card">
-      <h3>For Families</h3>
-      <h2>Consumer App</h2>
-      <p>Your family's AI companion — shared sessions, parental oversight, and conversations that stay yours.</p>
+      <h3>Law Firms &amp; General Counsel</h3>
+      <h2>Customer Pitch</h2>
+      <p>Built for AmLaw 200 and Fortune 500 legal teams — FRE 502(b) compliance, privilege chain of custody, ransomware-resilient document storage, and the "protect the privilege, not just the data" positioning.</p>
       <div class="card-links">
-        <a href="slides/consumer.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Consumer-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="customer-pitch.html" class="btn-view">View Pitch</a>
       </div>
     </div>
 
-    <div class="card">
-      <h3>For Small Business</h3>
-      <h2>Business App</h2>
-      <p>AI continuity for small and mid-size teams — client context, coaching, and governance without the enterprise overhead.</p>
+    <div class="card" style="grid-column: 1 / -1;">
+      <h3>Expert &amp; Technical</h3>
+      <h2>Expert Witness Materials</h2>
+      <p>Technical and legal framing for expert witness engagements — distributed secret sharing vs. encryption, the "document that doesn't exist on any single node" architecture, and defensible chain-of-custody arguments in discovery.</p>
       <div class="card-links">
-        <a href="slides/business.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-Business-Deck.pdf" class="btn-pdf">Download PDF</a>
+        <a href="expert-witness.html" class="btn-view">View Materials</a>
       </div>
     </div>
 
-    <div class="card">
-      <h3>The Playbook</h3>
-      <h2>Go to Market</h2>
-      <p>The playbook: two parallel tracks, community-first acquisition, and enterprise BD.</p>
-      <div class="card-links">
-        <a href="slides/gtm.html" class="btn-view">View Online</a>
-        <a href="slides/True-North-GTM-Deck.pdf" class="btn-pdf">Download PDF</a>
-      </div>
-    </div>
+  </div>
 
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Enterprise Healthcare</h3>
-      <h2>True North Continuity</h2>
-      <p>Intrusion-safe healthcare records — presentations and briefs for investors, CIOs, CMIOs, and internal BD. Four slide decks, four two-page briefs.</p>
-      <div class="card-links">
-        <a href="healthcare/" class="btn-view">View All Materials</a>
-      </div>
-    </div>
+  <div class="section-label">Research</div>
+  <div class="grid">
 
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Enterprise Insurance</h3>
-      <h2>True North Continuity</h2>
-      <p>The dual thesis — insurers as buyers and as channel. Presentation, five audience-specific 2-pagers (VC, CISO, CUO, BD, InsurTech), and research references.</p>
+    <div class="card" style="grid-column: 1 / -1;">
+      <h3>Reference</h3>
+      <h2>References &amp; Sources</h2>
+      <p>All external sources cited across the legal research pipeline: FRE 502(b), ABA Model Rules 477R and 483, FBI PIN 20250523-001, Glencore (AU), NAIC cybersecurity frameworks, and privilege case law.</p>
       <div class="card-links">
-        <a href="insurance/" class="btn-view">View All Materials</a>
-      </div>
-    </div>
-
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Enterprise Legal</h3>
-      <h2>True North Relay Network</h2>
-      <p>Privilege-preserving infrastructure for law firms — investor pitch, customer pitch (AmLaw 200 + Fortune 500 GC), expert witness materials, and research references. FRE 502(b), ABA 477R/483, distributed secret sharing.</p>
-      <div class="card-links">
-        <a href="enterprise-legal/" class="btn-view">View All Materials</a>
-      </div>
-    </div>
-
-    <div class="card" style="border-color: var(--border-gold);">
-      <h3>Consumer AI Chat</h3>
-      <h2>True North Family AI</h2>
-      <p>Family-aligned AI chat — the blue ocean pitch deck, investor summary, and consumer 2-pager. Multi-model safety, world-view alignment, deep-linking virality. $600M SAM, LTV/CAC 30–50x, $500K seed ask.</p>
-      <div class="card-links">
-        <a href="consumer-ai-chat/" class="btn-view">View All Materials</a>
+        <a href="references.html" class="btn-view">View References</a>
       </div>
     </div>
 
